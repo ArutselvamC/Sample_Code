@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        width: 250px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aquamarine;
+        border-radius: 15px;
+        font-family: sans-serif;
+      }
+      #btn,
+      #btn2 {
+        width: 150px;
+        font-size: medium;
+        font-weight: bold;
+        height: 35px;
+        background-color: blanchedalmond;
+        border: none;
+        border-radius: 7px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>People</h1>
+      <h2 id="count-el">0</h2>
+      <button id="btn" onclick="Increament()">Incerament</button>
+      <button id="btn2" onclick="Save()">Save</button>
+      <p id="save-el">Previous Entries:</p>
+    </div>
+    <script>
+      let countEl = document.getElementById("count-el");
+      let saveEl = document.getElementById("save-el");
+      let count = 0;
+
+      function Increament() {
+        count += 1;
+        countEl.textContent = count;
+      }
+      function Save() {
+        let CountStr = count + "-";
+        saveEl.textContent += CountStr;
+        countEl.textContent = 0;
+        count = 0;
+      }
+    </script>
+  </body>
+</html>
