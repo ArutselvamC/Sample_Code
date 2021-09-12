@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #000;
+      }
+      .header {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background: #000;
+      }
+      .header #bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+      }
+      section {
+        padding: 100px;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        text-align: justify;
+      }
+      section h2 {
+        font-size: 3em;
+      }
+      section p {
+        font-size: 1.2 em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div id="bg"></div>
+    </div>
+    <section>
+      <h2>Parallax Effect</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque ipsam
+        maxime exercitationem minima laudantium vel consequuntur quas mollitia
+        quis officiis reiciendis, eius ratione nulla unde earum numquam. Ipsam,
+        nihil saepe. Nemo sit magnam vel corrupti quia, incidunt deleniti vitae
+        debitis nam repudiandae aspernatur. Esse eligendi nihil nulla numquam.
+        Voluptate facere assumenda nostrum inventore at aut a nihil corporis
+        culpa officia. <br />Nesciunt magnam dolorem maxime earum obcaecati,
+        accusamus enim vitae repudiandae commodi cupiditate modi neque,
+        architecto sed voluptatem doloremque, impedit sit atque aliquid officiis
+        inventore. Aperiam non at reiciendis ducimus eaque? Iste molestiae unde
+        praesentium aliquid cupiditate incidunt magnam distinctio inventore
+        consequuntur enim velit tempore in tempora labore ex, ipsa repellat
+        mollitia ducimus temporibus fugit laudantium id? Repellendus facere
+        accusamus excepturi! Quasi similique quis minima nulla nisi? Vel, nisi
+        doloremque necessitatibus incidunt aut repudiandae beatae aliquam
+        repellendus pariatur ipsa distinctio eaque numquam facilis fuga quod
+        quis saepe nulla suscipit iste! Ex? Similique aut non facilis saepe
+        nulla exercitationem natus maiores nobis dolor ullam aperiam voluptatum
+        aliquid vero, <br />sed veritatis! Quaerat tenetur temporibus quidem non
+        porro animi doloremque obcaecati aliquam saepe impedit. Ab inventore
+        adipisci reprehenderit ex nulla molestiae corporis fugiat, maiores fugit
+        quasi sit animi iste beatae, incidunt saepe suscipit consequatur eaque
+        aliquam eos natus nostrum officia laborum. Totam, quaerat voluptas.
+        Veniam voluptatibus reiciendis nam ratione expedita laborum nulla sint
+        magnam rem vitae in dolorem, porro minima, molestiae quidem quas illum.
+        In placeat corrupti culpa hic alias! Amet voluptates facere deserunt.
+        Dicta reprehenderit quae cum maxime ullam, delectus ad sapiente dolorem,
+        assumenda est et consequatur in blanditiis commodi qui fuga. In possimus
+        quibusdam nobis ipsum iste numquam aliquam praesentium libero modi! Odio
+        voluptates pariatur nisi maiores libero ab qui cum facilis est, animi,
+        unde accusantium possimus natus aliquam dolorem, dolor vel et iusto
+        harum. Provident eligendi accusamus, quasi praesentium explicabo
+        consectetur! <br />Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Illo consequatur consectetur facere voluptatum ut delectus eaque a
+        nihil iure sequi, corporis, alias, impedit aspernatur tempore ratione
+        accusamus numquam quibusdam dolorem! Vitae repellat, adipisci nam
+        provident officia totam. Laboriosam, temporibus repellat cumque
+        voluptate reiciendis fuga pariatur et. Adipisci et, molestias est, quo,
+        placeat inventore error temporibus eius at quibusdam qui voluptas!
+        Repellat nesciunt eveniet, enim quos veritatis assumenda ut ratione
+        nulla qui iure ipsam illum cum sit provident, quibusdam deserunt? Id,
+        maxime dolores. Sit omnis, harum autem odit illum nemo voluptas. Et,
+        nobis. ,<br />Atque debitis reprehenderit repudiandae aperiam tempora
+        omnis nulla tempore? Sint, ratione harum. Sit maiores vel eveniet
+        praesentium amet dignissimos cum laboriosam laudantium blanditiis at,
+        repellendus laborum, illum esse. At, recusandae voluptatibus fugit
+        perspiciatis excepturi explicabo! Fugit, sapiente dolor natus quibusdam,
+        illum temporibus esse consequuntur, enim aspernatur assumenda
+        dignissimos? Sit corrupti non reiciendis perspiciatis soluta esse quia
+        hic veritatis?
+      </p>
+    </section>
+    <script>
+      var headerBg = document.getElementById("bg");
+      window.addEventListener("scroll", function () {
+        headerBg.style.opacity = 1 - +window.pageYOffset / 670 + "";
+        headerBg.style.top = +window.pageYOffset + "px";
+        headerBg.style.backgroundPositionY = -+window.pageYOffset / 2 + "px";
+      });
+    </script>
+  </body>
+</html>
